@@ -5,8 +5,10 @@ description = "Game launcher for libgdx-game"
 authors = ["Andrew Delph <andrewdelph@live.ca>"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "3.9"
 requests = "^2.27.1"
+clint = "^0.5.1"
+pyinstaller = "^4.10"
 
 [tool.poetry.dev-dependencies]
 
