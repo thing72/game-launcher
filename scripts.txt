@@ -1,7 +1,11 @@
 (Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py -UseBasicParsing).Content | python -
 
 poetry shell
+
 poetry run pyinstaller --onefile main.py 
 
-
 poetry run python main.py
+
+docker build -f Launcher.Dockerfile -t andrewdelph/game-launcher:latest .
+
+docker run -it andrewdelph/game-launcher:latest bash

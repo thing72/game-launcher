@@ -4,6 +4,7 @@ from clint.textui import progress
 from datetime import datetime
 import os
 import zipfile
+import shutil
 
 def download_file(url, file_name):
     r = requests.get(url, stream=True)
@@ -21,6 +22,11 @@ file_name = "game.zip"
 
 
 download_file(url,file_name)
+
+try:
+    shutil.rmtree("unzip")
+except OSError as e:
+    print ("Error: %s - %s." % (e.filename, e.strerror))
 
 # unzip the file
 try:
