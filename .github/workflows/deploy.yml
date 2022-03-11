@@ -39,12 +39,9 @@ jobs:
       #     docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
       #     echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
 
-      - uses: addnab/docker-run-action@v3
-        with:
-          image: mcr.microsoft.com/windows/servercore:ltsc2022
-          # options: -v ${{ github.workspace }}:/app/dist
-          # run: |
-          #   ./gradlew '-Pexclude.android=true' '-PENV=prod' zipit  
+      - name: windows run
+        run: |
+          docker run mcr.microsoft.com/windows/servercore:ltsc2022
 
       # - name: Upload game.zip file to bucket
       #   uses: zdurham/s3-upload-github-action@master
