@@ -17,8 +17,8 @@ def download_file(url, file_name):
                 f.flush()
 
 
-url = 'https://thing-72-game.s3.amazonaws.com/game.zip'
-file_name = "game.zip"
+url = 'https://thing-72-game.s3.amazonaws.com/windows/game.zip'
+file_name = "./game.zip"
 
 
 download_file(url,file_name)

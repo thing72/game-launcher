@@ -15,6 +15,14 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "cachetools"
+version = "5.2.0"
+description = "Extensible memoizing collections and decorators"
+category = "main"
+optional = false
+python-versions = "~=3.7"
+
+[[package]]
 name = "certifi"
 version = "2021.10.8"
 description = "Python package for providing Mozilla's CA Bundle."
@@ -81,6 +89,18 @@ python-versions = ">=3.6.0"
 
 [package.dependencies]
 future = "*"
+
+[[package]]
+name = "py2exe"
+version = "0.11.1.1"
+description = "Build standalone executables for Windows"
+category = "main"
+optional = false
+python-versions = ">=3.7, <3.11"
+
+[package.dependencies]
+cachetools = "*"
+pefile = "*"
 
 [[package]]
 name = "pyinstaller"
@@ -150,8 +170,8 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 
 [metadata]
 lock-version = "1.1"
-python-versions = "3.9"
-content-hash = "86aa037e7793a5f29fbf74c3ddeecf40e3565a1d189b45b5f50163d2b8b38750"
+python-versions = "~3.9"
+content-hash = "97f1b9652157cdb1e072a2e74c8a086466100998e5b7afc1a927e41eea871994"
 
 [metadata.files]
 altgraph = [
@@ -160,6 +180,10 @@ altgraph = [
 ]
 args = [
     {file = "args-0.1.0.tar.gz", hash = "sha256:a785b8d837625e9b61c39108532d95b85274acd679693b71ebb5156848fcf814"},
+]
+cachetools = [
+    {file = "cachetools-5.2.0-py3-none-any.whl", hash = "sha256:f9f17d2aec496a9aa6b76f53e3b614c965223c061982d434d160f930c698a9db"},
+    {file = "cachetools-5.2.0.tar.gz", hash = "sha256:6a94c6402995a99c3970cc7e4884bb60b4a8639938157eeed436098bf9831757"},
 ]
 certifi = [
     {file = "certifi-2021.10.8-py2.py3-none-any.whl", hash = "sha256:d62a0163eb4c2344ac042ab2bdf75399a71a2d8c7d47eac2e2ee91b9d6339569"},
@@ -185,6 +209,17 @@ macholib = [
 ]
 pefile = [
     {file = "pefile-2021.9.3.tar.gz", hash = "sha256:344a49e40a94e10849f0fe34dddc80f773a12b40675bf2f7be4b8be578bdd94a"},
+]
+py2exe = [
+    {file = "py2exe-0.11.1.1-cp310-cp310-win32.whl", hash = "sha256:04cb0b2f9ff4a443b6cde171a617f5b2306c1529cff58e90a8e046474abb2ca4"},
+    {file = "py2exe-0.11.1.1-cp310-cp310-win_amd64.whl", hash = "sha256:31423d29dfc767c9d523037f2b0c8c65343b600eb6cd7913a1e80e2e2edd4ca9"},
+    {file = "py2exe-0.11.1.1-cp37-cp37m-win32.whl", hash = "sha256:55daf0a721ebb3eeebccffc22e3402a72f485ba32b9a826c4a16199a65847d93"},
+    {file = "py2exe-0.11.1.1-cp37-cp37m-win_amd64.whl", hash = "sha256:5e1786411b02854a4cbb1dd3e1d16f6ff1920457170b3f33a67ade1a76d00ed8"},
+    {file = "py2exe-0.11.1.1-cp38-cp38-win32.whl", hash = "sha256:3b156daf52de3bc24261ff05969148460fc04cc50e17b207c6cb78fe193958a3"},
+    {file = "py2exe-0.11.1.1-cp38-cp38-win_amd64.whl", hash = "sha256:3811065e043e3f9a588320ace57403d8a97917c8fe0f51759da71960abc441c2"},
+    {file = "py2exe-0.11.1.1-cp39-cp39-win32.whl", hash = "sha256:beacf6d496eab738d55df9701eb60623e11169993552d9cb8d1f20c279d2b323"},
+    {file = "py2exe-0.11.1.1-cp39-cp39-win_amd64.whl", hash = "sha256:13962fef7b185fe7aaef3b857d925950b49e60b801e1cf995135c8fe146b2dd3"},
+    {file = "py2exe-0.11.1.1.tar.gz", hash = "sha256:210018c7f99fa74f9542d7ef5248abc1e19e7deac706e600fdbbbf1aac09cc91"},
 ]
 pyinstaller = [
     {file = "pyinstaller-4.10-py3-none-macosx_10_13_universal2.whl", hash = "sha256:15557cd1a79d182967f0a5040750e6902e13ebd6cab41e3ed84d7b28a306357b"},
